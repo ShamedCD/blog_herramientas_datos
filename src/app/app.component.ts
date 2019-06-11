@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'blog-herramientas';
+  banner: string = '../assets/images/Unicaribe.png';
 }

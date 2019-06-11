@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-info sticky-top">
+  <a class="navbar-brand" [routerLink]="[rutas[0].path]">DAAS</a>
+  <button
+    class="navbar-toggler hidden-sm-up"
+    (click)="isNavbarCollapsed = !isNavbarCollapsed"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div
+    [ngbCollapse]="isNavbarCollapsed"
+    class="collapse navbar-collapse"
+    id="navbarSupportedContent"
+  >
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="[rutas[0].path]">
+          Home<span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Posts</a>
+      </li>
+      <li ngbDropdown class="nav-item dropdown">
+        <a
+          ngbDropdownToggle
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Services
+        </a>
+        <div
+          ngbDropdownMenu
+          class="dropdown-menu"
+          aria-labelledby="navbarDropdown"
+        >
+          <a class="dropdown-item" href="#">Semana 1</a>
+          <a class="dropdown-item" href="#">Semana 2</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="[rutas[1].path]">Team DAAS</a>
+      </li>
+    </ul>
+  </div>
+</nav>
